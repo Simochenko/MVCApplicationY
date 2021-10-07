@@ -9,6 +9,7 @@
             <td><p>Name book</p></td>
             <td><p>Author</p></td>
             <td><p>Price</p></td>
+            <td></td>
         </tr>
         @foreach (var b in ViewBag.Books)
             {
@@ -16,6 +17,7 @@
                     <td><p>@b.Name</p></td>
                     <td><p>@b.Author</p></td>
                     <td><p>@b.Price</p></td>
+                    <td><p><a href="/Home/Buy/@b.Id">BUY</a></p></td>
                 
                 </tr>
             }

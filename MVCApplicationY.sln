@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingAppStore", "BookingAppStore\BookingAppStore.csproj", "{6271F3C3-AA8E-492D-9B73-E755389BD485}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ControllersBasics", "ControllersBasics", "{E8CA98B1-47C1-422E-ACF8-752F21D0C89D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllersBasic", "ControllersBasic\ControllersBasic.csproj", "{ED7DE5DC-4C99-4220-9B7B-629B87B0241E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{6271F3C3-AA8E-492D-9B73-E755389BD485}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6271F3C3-AA8E-492D-9B73-E755389BD485}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6271F3C3-AA8E-492D-9B73-E755389BD485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED7DE5DC-4C99-4220-9B7B-629B87B0241E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED7DE5DC-4C99-4220-9B7B-629B87B0241E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED7DE5DC-4C99-4220-9B7B-629B87B0241E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED7DE5DC-4C99-4220-9B7B-629B87B0241E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ED7DE5DC-4C99-4220-9B7B-629B87B0241E} = {E8CA98B1-47C1-422E-ACF8-752F21D0C89D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CF50A678-7649-4733-9480-E4DF74412ADE}
