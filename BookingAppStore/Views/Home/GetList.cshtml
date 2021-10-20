@@ -1,0 +1,11 @@
+﻿@*<h2>@ViewBag.Message</h2>*@
+
+
+@model IEnumerable<string>
+    <h2>список стран</h2>
+<ul>
+    @foreach(string t in Model)
+            {
+                <li>@t</li>
+            }
+</ul>

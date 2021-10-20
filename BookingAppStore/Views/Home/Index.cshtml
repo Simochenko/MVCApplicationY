@@ -1,4 +1,11 @@
 ﻿@{
+    //  Layout = "~/Views/Shared/_Layout2.cshtml";
+    //  Layout = null;
+}
+
+@using BookingAppStore.Models;
+@model IEnumerable<Book>
+@{
     ViewBag.Title = "Book store";
 }
 
@@ -11,15 +18,93 @@
             <td><p>Price</p></td>
             <td></td>
         </tr>
-        @foreach (var b in ViewBag.Books)
-            {
-                <tr>
-                    <td><p>@b.Name</p></td>
-                    <td><p>@b.Author</p></td>
-                    <td><p>@b.Price</p></td>
-                    <td><p><a href="/Home/Buy/@b.Id">BUY</a></p></td>
-                
-                </tr>
-            }
+        @foreach (Book b in Model)
+        {
+            <tr>
+                <td><p>@b.Name</p></td>
+                <td><p>@b.Author</p></td>
+                <td><p>@b.Price</p></td>
+                <td><p><a href="/Home/Buy/@b.Id">BUY BUY</a></p></td>
+
+            </tr>
+        }
     </table>
 </div>
+
+@helper BookList(IEnumerable<Book> books)
+{
+    <ul>
+        @foreach (Book b in books)
+        {
+            <li>@b.Name</li>
+        }
+    </ul>
+}
+
+@using (Html.BeginForm("GetForm", "Home", FormMethod.Post))
+{
+    @Html.ListBox("countries", new MultiSelectList(new string[] { "Россия", "США", "Китай", "Индия" }))
+
+    @*@Html.DropDownList("author", ViewBag.Author as SelectList)*@
+
+    @*@Html.CheckBox("set", false) <span>Enable</span>*@
+
+    @*@Html.RadioButton("color", "red")
+        <span>красный</span>
+        <br />
+        @Html.RadioButton("color", "blue")
+        <span>синий</span>
+        <br />
+        @Html.RadioButton("color", "green", true)
+        <span>зеленый</span>*@
+
+    <input type="submit" value="Send" />
+
+}
+
+
+
+@*<h3>Список книг</h3>
+    @BookList(Model)*@
+
+
+@helper CreateList(string[] all)
+{
+    <ul>
+        @foreach (string s in all)
+        {
+            <li>@s</li>
+        }
+    </ul>
+}
+
+@{
+    string[] cities = new string[] { "London", "Paris", "Moskov" };
+}
+
+@{
+    string[] countries = new string[] { "Великобритания", "Франция", "Россия" };
+}
+
+@using BookingAppStore.Helpers
+@Html.CreateList(cities)
+
+@ListHelper.CreateList(Html, countries)
+
+@*<h3>Cities</h3>
+    @CreateList(cities)
+    <br />
+    <h3>Countries</h3>
+    @CreateList(countries)*@
+
+
+
+@*@Html.Action("Getlist")*@
+
+@*@Html.Partial("GetList", new string[] {"Russia", "USA", "Canada", "France" })*@
+
+@*@{ Html.RenderPartial("GetList");}*@
+
+@section Footer{
+    <h5>Все права защищены 2021</h5>
+}

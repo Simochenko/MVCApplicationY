@@ -1,25 +1,29 @@
-﻿
+﻿@model BookingAppStore.Models.Purchase
 @{
     ViewBag.Title = "Buy";
 }
 
 <div>
     <h3>Форма оформления покупки</h3>
-    <form method="post" action="">
-        <input type="hidden" value="@ViewBag.BookId" name="BookId"/>
+
+@using (Html.BeginForm("Buy", "Home", FormMethod.Post))
+    {
+        @*<input type="hidden" value="@ViewBag.BookId" name="BookId" />*@
+        @Html.HiddenFor(m=>m.BookId)
         <table>
             <tr>
-                <td><p>enter you name</p></td>
-                <td><input type="text" name="Person"/></td>
+                <td><p>@Html.LabelFor(m => m.Person, "enter you name")</p></td>
+                <td>@Html.TextBoxFor(m => m.Person)</td>
             </tr>
             <tr>
-                <td><p>enter address :</p></td>
+                <td><p>@Html.Label("Address", "enter address")</p></td>
                 <td>
-                    <input type="text" name="Address" />
+                    @Html.TextBoxFor(m => m.Address) 
                 </td>
             </tr>
-            <tr><td><input type="submit" value="Send"/></td><td></td></tr>
+            <tr><td><input type="submit" value="Send" /></td><td></td></tr>
         </table>
-    </form>
+    }
+    
 </div>
 

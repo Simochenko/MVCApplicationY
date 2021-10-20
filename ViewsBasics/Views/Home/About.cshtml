@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "About";
+    int i = 9;
+    List<string> fruit = new List<string> { "Apple", "Mango", "Banan" };
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+<h1>@DateTime.Now.ToShortTimeString()</h1>
+
+<p>@i++</p>
+@if (i == 2)
+            {
+                <p>i=2</p>
+            }
+else
+            {
+                <p>i != 2</p>
+            }
+@foreach(string f in fruit)
+            {
+                <p>@f</p>
+            }
