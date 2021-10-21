@@ -1,6 +1,7 @@
 ﻿using BookingAppStore.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -20,6 +21,121 @@ namespace BookingAppStore.Controllers
             ViewBag.Author = author;
             return View(books);
         }
+
+        [HttpGet]
+        public ActionResult CreateBook()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateBook(Book book)
+        {
+            db.Books.Add(book); // insert
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Book book)
+        {
+            db.Books.Add(book); // insert
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        //public ActionResult Delete(int id)
+        //{
+        //    Book b = db.Books.Find(id);
+        //    if (b != null)
+        //    {
+        //        db.Books.Remove(b); //DELETE
+        //        db.SaveChanges();
+        //    }
+        //    //Book b = new Book { Id = id };
+        //    //db.Entry(b).State = EntityState.Deleted;
+        //    //db.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
+
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            Book b = db.Books.Find(id);
+            if (b == null)
+            {
+                return HttpNotFound();
+            }
+            return View(b);
+        }
+
+        [HttpPost, ActionName("Delete")]
+
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Book b = db.Books.Find(id);
+            if(b == null)
+            {
+                return HttpNotFound();
+            }
+            db.Books.Remove(b);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult EditBook(int? id)
+        {
+            if (id == null)
+            {
+                return HttpNotFound();
+            }
+            Book book = db.Books.Find(id);
+            if (book != null)
+            {
+                return View(book);
+            }
+            return HttpNotFound();
+        }
+        [HttpPost]
+
+        public ActionResult EditBook(Book book)
+        {
+            db.Entry(book).State = EntityState.Modified; //UPDATE
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return HttpNotFound();
+            }
+            Book book = db.Books.Find(id);
+            if(book != null)
+            {
+                return View(book);
+            }
+            return HttpNotFound();
+        }
+        [HttpPost]
+
+        public ActionResult Edit(Book book)
+        {
+            db.Entry(book).State = EntityState.Modified; //UPDATE
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
 
         public ActionResult GetBook(int id)
         {

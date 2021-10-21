@@ -8,6 +8,7 @@
 @{
     ViewBag.Title = "Book store";
 }
+<a href="/Home/Create">Create</a>
 
 <div>
     <h3>Распродажа книг</h3>
@@ -24,7 +25,7 @@
                 <td><p>@b.Name</p></td>
                 <td><p>@b.Author</p></td>
                 <td><p>@b.Price</p></td>
-                <td><p><a href="/Home/Buy/@b.Id">BUY BUY</a></p></td>
+                <td><p><a href="/Home/Buy/@b.Id">BUY BUY</a>|<a href="/Home/Delete/@b.Id">Delete</a>|<a href="/Home/Edit/@b.Id">UPDATE</a></p></td>
 
             </tr>
         }
