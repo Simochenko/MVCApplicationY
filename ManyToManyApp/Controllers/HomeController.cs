@@ -49,6 +49,29 @@ namespace ManyToManyApp.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Create()
+        {
+            ViewBag.Courses = db.Courses.ToList();
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Student student, int[] selectedCourses)
+        {
+            if(selectedCourses != null)
+            {
+                // получаем выбранные курсы
+                foreach (var c in db.Courses.Where(co => selectedCourses.Contains(co.Id)))
+                {
+                    student.Courses.Add(c);
+                }
+            }
+
+            db.Students.Add(student);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
         public ActionResult Details(int id = 0)
         {
             Student student = db.Students.Find(id);

@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavigationApp", "Navigation
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManyToManyApp", "ManyToManyApp\ManyToManyApp.csproj", "{BFC5A29E-BB8F-4A31-A681-145CC5DDED7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayMvcApp", "ArrayMvcApp\ArrayMvcApp.csproj", "{705BE3D4-9B0C-4FD7-ACA2-A751F962BC41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrateDBApp", "MigrateDBApp\MigrateDBApp.csproj", "{B358E9B4-9C89-4B63-942C-2C4306575858}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,14 @@ Global
 		{BFC5A29E-BB8F-4A31-A681-145CC5DDED7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFC5A29E-BB8F-4A31-A681-145CC5DDED7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFC5A29E-BB8F-4A31-A681-145CC5DDED7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{705BE3D4-9B0C-4FD7-ACA2-A751F962BC41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{705BE3D4-9B0C-4FD7-ACA2-A751F962BC41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{705BE3D4-9B0C-4FD7-ACA2-A751F962BC41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{705BE3D4-9B0C-4FD7-ACA2-A751F962BC41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B358E9B4-9C89-4B63-942C-2C4306575858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B358E9B4-9C89-4B63-942C-2C4306575858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B358E9B4-9C89-4B63-942C-2C4306575858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B358E9B4-9C89-4B63-942C-2C4306575858}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
