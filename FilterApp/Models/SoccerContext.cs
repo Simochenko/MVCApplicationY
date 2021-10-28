@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 using FilterApp.Models;
-using static FilterApp.Models.SoccerModels;
+using static FilterApp.Models.Player;
 
 namespace FilterApp.Models
 {

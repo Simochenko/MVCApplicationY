@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagingApp", "PagingApp\Pagi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterApp", "FilterApp\FilterApp.csproj", "{2AE06098-098F-4AA5-95E5-BB3C3C7DB386}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTemplatesApp", "CustomTemplatesApp\CustomTemplatesApp.csproj", "{B0BD8CD7-93E0-4861-83EC-6F9077413041}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{2AE06098-098F-4AA5-95E5-BB3C3C7DB386}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AE06098-098F-4AA5-95E5-BB3C3C7DB386}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AE06098-098F-4AA5-95E5-BB3C3C7DB386}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0BD8CD7-93E0-4861-83EC-6F9077413041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0BD8CD7-93E0-4861-83EC-6F9077413041}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0BD8CD7-93E0-4861-83EC-6F9077413041}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0BD8CD7-93E0-4861-83EC-6F9077413041}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
