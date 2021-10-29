@@ -14,6 +14,12 @@ namespace CustomTemplatesApp.Controllers
             return View();
         }
 
+        public ActionResult Display()
+        {
+            Book book = new Book { Name = "Война и мир", Id = 1, Price = 23.8m };
+            return View(book);
+        }
+
         public ActionResult Edit()
         {
             Book book = new Book { Name = "Война и мир", Id = 1, Price = 23.8m };
