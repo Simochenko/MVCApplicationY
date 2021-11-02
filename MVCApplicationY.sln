@@ -31,6 +31,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTemplatesApp", "Custo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutesApp", "RoutesApp\RoutesApp.csproj", "{C83BA4D8-125A-47D6-84A6-EED2B36114AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AreasTestApp", "AreasTestApp\AreasTestApp.csproj", "{11190D8F-A26B-4072-BEF5-0331D8F118B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomRouteHandlerApp", "CustomRouteHandlerApp\CustomRouteHandlerApp.csproj", "{947DFF79-306C-4A31-A781-B0CBF4A1416C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouteAttributesApp", "RouteAttributesApp\RouteAttributesApp.csproj", "{B2F95800-6F78-436B-833D-9B71FBCDE3A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +91,18 @@ Global
 		{C83BA4D8-125A-47D6-84A6-EED2B36114AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C83BA4D8-125A-47D6-84A6-EED2B36114AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C83BA4D8-125A-47D6-84A6-EED2B36114AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11190D8F-A26B-4072-BEF5-0331D8F118B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11190D8F-A26B-4072-BEF5-0331D8F118B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11190D8F-A26B-4072-BEF5-0331D8F118B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11190D8F-A26B-4072-BEF5-0331D8F118B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{947DFF79-306C-4A31-A781-B0CBF4A1416C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{947DFF79-306C-4A31-A781-B0CBF4A1416C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{947DFF79-306C-4A31-A781-B0CBF4A1416C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{947DFF79-306C-4A31-A781-B0CBF4A1416C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2F95800-6F78-436B-833D-9B71FBCDE3A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2F95800-6F78-436B-833D-9B71FBCDE3A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2F95800-6F78-436B-833D-9B71FBCDE3A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2F95800-6F78-436B-833D-9B71FBCDE3A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

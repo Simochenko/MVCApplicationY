@@ -4,18 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace RoutesApp.Controllers
+namespace CustomRouteHandlerApp.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index(int id = 1)
+        public ActionResult Index()
         {
             return View();
-        }
-        public string GetController()
-        {
-            string controller = RouteData.Values["controller"].ToString();
-            return controller;
         }
 
         public ActionResult About()
