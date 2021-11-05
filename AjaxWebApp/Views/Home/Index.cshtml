@@ -3,37 +3,97 @@
 }
 
 @*<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+        <h1>ASP.NET</h1>
+        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+        <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>*@
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Getting started</h2>
+            <p>
+                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                enables a clean separation of concerns and gives you full control over markup
+                for enjoyable, agile development.
+            </p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Get more libraries</h2>
+            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Web Hosting</h2>
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </div>
+    </div>*@
 
-@using (Ajax.BeginForm("BookSearch", /*"Home"*/ new AjaxOptions { UpdateTargetId = "results" }))
-            {
-                <input type="text" name="name" />
-                <input type="submit" value="Search" />
-            }
+@*@using (Ajax.BeginForm("BookSearch", /*"Home"*/ new AjaxOptions
+    {
+        UpdateTargetId = "results",
+        Confirm = "Выполнить AJAX-запрос?",
+        InsertionMode = InsertionMode.InsertBefore
+
+        //LoadingElementId = "loading",
+        //LoadingElementDuration = 800
+    }))
+    {
+        <input type="text" name="name" />
+        <input type="submit" value="Search" />
+    }*@
 
 <div id="results"></div>
+
+@*<input type="text" id="name" name="name" />
+    <input type="submit" id="submit" value="Search" />*@
+
+@*<div id="loading" style="display:none; color:red; font-weight:bold;">
+        <p>loading...</p>
+    </div>*@
+
+@*<div id="bestbook">
+        @Ajax.ActionLink("Лучшая книга", "BestBook", new AjaxOptions {UpdateTargetId="bestbook"})
+    </div>*@
+
+@*@foreach (string s in ViewBag.Authors)
+    {
+
+            @Ajax.ActionLink(s, "BookSearch", new { name = s }, new AjaxOptions { UpdateTargetId = "results" })
+
+    }*@
+
+@using (Ajax.BeginForm("JsonSearch", /*"Home"*/ new AjaxOptions
+    {
+        OnSuccess = "OnSuccess"
+
+        //LoadingElementId = "loading",
+        //LoadingElementDuration = 800
+    }))
+    {
+        <input type="text" name="name" />
+        <input type="submit" value="Search" />
+    }
+
+@section scripts{
+    <script type="text/javascript">
+        function OnSuccess(data) {
+            var results = $('#results'); //получаем нужный элемент
+            results.empty(); //очищаем элемент
+            for (var i = 0; i < data.length; i++) {
+                results.append('<p>' + data[i].Name + '</p>'); //добавляем данные в список
+            }
+        }
+
+
+    $(document).ready(function () {
+        $('#submit').click(function (e) {
+            e.preventDefault();
+            var name = $('#name').val();
+            name = encodeURIComponent(name);
+            $('#results').load('@Url.Action("BookSearch")?name=' + name);
+        });
+    });
+    </script>
+}
