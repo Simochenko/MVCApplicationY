@@ -43,6 +43,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BundlesApplication", "Bundl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxWebApp", "AjaxWebApp\AjaxWebApp.csproj", "{A3EED73A-FA39-4130-AB55-9B9D2DDC99F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiltersStudyApp", "FiltersStudyApp\FiltersStudyApp.csproj", "{91892644-1BBE-4488-B803-ED2B80054A2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthWebApp", "AuthWebApp\AuthWebApp.csproj", "{6CF943A3-4764-465A-A7FC-845D110ECEFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +133,14 @@ Global
 		{A3EED73A-FA39-4130-AB55-9B9D2DDC99F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3EED73A-FA39-4130-AB55-9B9D2DDC99F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3EED73A-FA39-4130-AB55-9B9D2DDC99F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91892644-1BBE-4488-B803-ED2B80054A2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91892644-1BBE-4488-B803-ED2B80054A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91892644-1BBE-4488-B803-ED2B80054A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91892644-1BBE-4488-B803-ED2B80054A2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CF943A3-4764-465A-A7FC-845D110ECEFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF943A3-4764-465A-A7FC-845D110ECEFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF943A3-4764-465A-A7FC-845D110ECEFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF943A3-4764-465A-A7FC-845D110ECEFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
