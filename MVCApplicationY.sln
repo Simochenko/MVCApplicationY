@@ -47,6 +47,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiltersStudyApp", "FiltersS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthWebApp", "AuthWebApp\AuthWebApp.csproj", "{6CF943A3-4764-465A-A7FC-845D110ECEFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityApp", "IdentityApp\IdentityApp.csproj", "{17575CBF-4464-41D9-98AB-03BB32AF090B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomIdentityApp", "CustomIdentityApp\CustomIdentityApp.csproj", "{CF74C977-F965-4201-910C-285A2C380AFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +145,14 @@ Global
 		{6CF943A3-4764-465A-A7FC-845D110ECEFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CF943A3-4764-465A-A7FC-845D110ECEFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CF943A3-4764-465A-A7FC-845D110ECEFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17575CBF-4464-41D9-98AB-03BB32AF090B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17575CBF-4464-41D9-98AB-03BB32AF090B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17575CBF-4464-41D9-98AB-03BB32AF090B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17575CBF-4464-41D9-98AB-03BB32AF090B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF74C977-F965-4201-910C-285A2C380AFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF74C977-F965-4201-910C-285A2C380AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF74C977-F965-4201-910C-285A2C380AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF74C977-F965-4201-910C-285A2C380AFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,10 @@
+﻿@model List<string>
+@{
+    ViewBag.Title = "GetMyRoles";
+}
+
+<h2>Мои Роли</h2>
+@foreach(var item in Model)
+            {
+                <p>@item</p>
+            }
